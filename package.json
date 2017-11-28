@@ -1,0 +1,25 @@
+{
+  "name": "adam",
+  "version": "0.1.0",
+  "description": "test library",
+  "scripts": {
+    "test": "jest"
+  },
+  "main": "js/pencil.js",
+  "keywords": [
+    "tool",
+    "js",
+    "library"
+  ],
+  "author": "Lyang",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^21.1.8",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^21.2.1",
+    "mockdate": "^2.0.2",
+    "standard": "^10.0.3"
+  }
+}
