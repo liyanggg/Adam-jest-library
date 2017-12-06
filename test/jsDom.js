@@ -17,9 +17,6 @@ describe('分组：removeNode', () => {
 })
 describe('分组：$(selector)选择器(利用querySelector)', () => {
   test('选择类', () => {
-    /**
-     * 老师我想把下面DOM操作放到describe的回调里，但是test会出错，为什么放在test()里就没问题呢？
-     */
     document.body.innerHTML = '<p class="tClass" id="tId">t1</p><p class="tClass">t2</p>'
     expect(Base.$('.tClass').nodeName.toLowerCase()).toBe('p')
   })
@@ -30,11 +27,6 @@ describe('分组：$(selector)选择器(利用querySelector)', () => {
     expect(Base.$('p').nodeName.toLowerCase()).toBe('p')
   })
   test('多个同类名元素只选取第一个', () => {
-    /**
-     * 老师为什么这里DOM对象没有innerText属性？
-     */
-    console.log(Base.$('.tClass').innerText) // undefined
-    console.log(Base.$('.tClass').innerHTML) // t1
     expect(Base.$('.tClass').innerHTML).toBe('t1')
   })
   test('selector不存在', () => {
@@ -117,7 +109,6 @@ describe('分组：addClass', () => {
     document.body.innerHTML = tpl
     let node = document.getElementsByClassName('p')[0]
     let className = []
-    console.log(className)
     Base.addClass(node, className)
     expect(node.className).toBe('p')
   })
